@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontawesome-free-5.11.2-web/css/all.css">
+    <link rel="stylesheet" href="todo.css">
+    <title>To-do</title>
+</head>
+<body onload="load()">
+    <div class="con">
+        
+        <div id="page1" class="container">
+            <div>
+                <div class="mg-tb pad"><h2>Notes</h2></div>
+                <div class="mg-tb"><input type="text" name="" id="search" placeholder="search"></div>
+            </div>      
+            <div class="list">
+                
+            </div>
+            <div class="nav-bar flex-cen">
+                <div class="flex-c nav-i">
+                    <i class="fas fa-clipboard"></i>
+                    <p>Notes</p>
+                </div>
+                    <div id="todo-i" class="flex-c nav-i">
+                        <i class="fas fa-check-circle"></i>
+                        <p>To-dos</p>
+                    </div>
+                </div>
+                <button class="add" onclick="add()"><i class="fas fa-plus"></i></button>
+            </div>  
+            
+            <div id="page2" class="container">
+                <div>
+                    <div class="flex-sp">
+                        <div class="flex mg-tb">
+                            <div class="check"><i id="back" class="fa fa-arrow-left pad"></i></div>
+                            <h3 class="pad">Notes</h3>
+                        </div>
+                        <div class="mg-tb check" onclick="myFunction()"><i class="fa fa-check"></i></div>
+                    </div>
+                    <div id="time" class="mg-tb">Date</div>
+                </div>
+                <div class="list">
+                    <div><input type="text" placeholder="Title" class="input mg-tb" id="title-v"></div>
+                    <div><input type="text" placeholder="Add notes here" class="input" id="notes-v"></div>
+                </div>
+
+                <div id="album">
+                    <div id="albums" class="prompt">
+                        <div class="mg-b2"><p class="fade">Albums</p></div>
+                        <div class="mg-b2"><p>Take a picture</p></div>
+                        <div class=""><p>Choose a picture from albums</p></div>
+                    </div>
+                </div>
+                
+                <div onclick="albums()" class="nav-bar flex-cen">
+                    <div class="flex-c mg-lr nav-i">
+                        <i class="fas fa-image"></i>
+                        <h4>Albums</h4>
+                    </div>
+                    <div id="createLi" class="flex-c mg-lr nav-i">
+                        <i class="fas fa-check-circle"></i>
+                    <h4 class="pad">To-do-list</h4>
+                </div>
+                <div class="flex-c mg-lr nav-i">
+                    <i class="fas fa-bell"></i>
+                    <h4 class="">Reminder</h4>
+                </div>
+            </div>
+            
+        </div>
+
+        <div id="todo" class="container">
+            <div>
+                <div><i class="fa fa-ellipsis-v" style="float: right;"></i></div>
+                <div class="mg-t"><h3>To-Dos</h3></div>
+            </div>
+            <div class="list"></div>
+            <div class="nav-bar flex-cen">
+                <div id="note" class="flex-c nav-i">
+                    <i class="fas fa-clipboard"></i>
+                    <p>Notes</p></div>
+                <div class="flex-c nav-i">
+                    <i class="fas fa-check-circle"></i>
+                    <p>To-dos</p>
+                </div>
+            </div>
+            <button class="add" onclick="add()"><i class="fas fa-plus"></i></button>
+        </div>
+
+    </div>
+
+
+    <script src="todo.js"></script>
+</body>
+</html>
